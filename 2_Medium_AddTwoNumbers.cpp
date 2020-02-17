@@ -11,7 +11,7 @@ public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         
         // O(n), n - size of l1 or l2(of bigger one)
-        int sum = 0;
+        int sum (0);
         
         ListNode* curr1 = l1;
         ListNode* curr2 = l2;
