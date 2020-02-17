@@ -2,7 +2,7 @@ class Solution {
 public:
     string convert(string s, int numRows) {
         
-        // O(n), extra memory(matrix of n elements, where n is the size of string)
+        // O(n), extra memory(matrix of n elements, where n is the size of string s)
         
         string zigzag;
         
