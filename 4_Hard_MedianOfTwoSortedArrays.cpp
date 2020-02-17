@@ -2,6 +2,8 @@ class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         
+        // merging two arrays, and finding median
+        // O(m+n)
         vector<int> merged;
         
         int idx1(0), idx2(0);
