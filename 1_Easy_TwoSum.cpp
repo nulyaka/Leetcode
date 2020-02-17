@@ -7,7 +7,7 @@ public:
         vector<int> twoSum;
         map<int, int> myMap;
         
-        for (int idx = 0; idx < nums.size(); ++idx) {
+        for (int idx(0); idx < nums.size(); ++idx) {
             
             myMap.insert(pair<int, int>(nums.at(idx), idx));
             
