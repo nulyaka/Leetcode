@@ -10,6 +10,11 @@ class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         
+        // O(m + n)
+        
+        if (l1 == nullptr) return l2;
+        else if (l2 == nullptr) return l1;
+        
         ListNode* mergedHead = nullptr; 
         ListNode* mergedTail = nullptr;
         
@@ -40,16 +45,8 @@ public:
             }
         }
         
-        if (mergedHead == nullptr) {
-            
-            if (l1 != nullptr) mergedHead = l1;
-            else mergedHead = l2;
-        }
-        else {
-            
-            if (l1 != nullptr) mergedTail->next = l1;
-            else mergedTail->next = l2;
-        }
+        if (l1 != nullptr) mergedTail->next = l1;
+        else mergedTail->next = l2;
         
         return mergedHead;
     }
