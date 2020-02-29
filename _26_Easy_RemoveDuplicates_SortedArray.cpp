@@ -2,7 +2,7 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
         
-        // O(n)
+        // O(n), extra memory(1)
         
         if (!nums.size()) return 0;
         
