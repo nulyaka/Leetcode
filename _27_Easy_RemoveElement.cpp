@@ -2,6 +2,8 @@ class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
         
+        // O(n), extra memory(1)
+        
         int d(0); // stands for duplicates
         
         for (int i(0); i < nums.size(); ++i) {
