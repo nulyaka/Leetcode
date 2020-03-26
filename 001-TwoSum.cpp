@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
     
-        // O(n), extra memory (n size map)
+        // O(n * logn), extra memory (n size map)
         
         vector<int> twoSum;
         map<int, int> myMap;
