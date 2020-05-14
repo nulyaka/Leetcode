@@ -24,7 +24,7 @@ public:
                 ans += roman[s[c] - 'A'];
             }
         }
-        
+         
         return ans;
     }
 };
