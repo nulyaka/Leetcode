@@ -11,7 +11,6 @@ public:
             int sum = numbers[l] + numbers[r];
             
             if (sum == target) {
-                
                 return vector<int>({l + 1, r + 1});
             }
             else if (sum > target) r--;
@@ -39,7 +38,7 @@ public:
             else {
                 myMap[numbers[n]] = n;
             }
-        }
+        } 
         
         return ans;
     }
