@@ -2,21 +2,10 @@ class Comp {
 public:
     bool operator() (const string& first, const string& second) {
         
-        int c1 = 0, c2 = 0;
+        size_t pos1 = first.find(' ') + 1;
+        size_t pos2 = second.find(' ') + 1;
         
-        for (unsigned int c = 0; c < first.size(); ++c) {
-            if (first[c] == ' ') {
-                c1 = c + 1;
-                break;
-            }
-        }
-        for (unsigned int c = 0; c < first.size(); ++c) {
-            if (second[c] == ' ') {
-                c2 = c + 1;
-                break;
-            }
-        }
-        return first.substr(c1) >= second.substr(c2);
+        return first.substr(pos1) >= second.substr(pos2);
     }
 };
 
@@ -30,17 +19,10 @@ public:
         
         for (string& str: logs) {
             
-            char ch;
-            for (unsigned int c = 0; c < str.size(); ++c) {
-                
-                if (str[c] == ' ') {
-                    ch = str[c + 1];
-                    break;
-                }
-            }
+            size_t pos = str.find(' ') + 1;
             
-            if ('0' <= ch && ch <= '9') 
-                digit_logs.push_back(str);
+            if ('0' <= str[pos] && str[pos] <= '9') 
+                digit_logs.emplace_back(str);
             else 
                 letter_logs.push(str);
             
@@ -50,7 +32,7 @@ public:
         
         while (!letter_logs.empty()) {
             
-            reordered.push_back(letter_logs.top());
+            reordered.emplace_back(letter_logs.top());
             letter_logs.pop();
         }
         
