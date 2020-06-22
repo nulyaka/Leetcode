@@ -7,7 +7,7 @@ class Solution:
         right = len(A) - 1
         
         while left < right:
-            
+    
             # True and True (e.g. 1 and 1)
             if A[left] % 2 and A[right] % 2: 
                 right -= 1
