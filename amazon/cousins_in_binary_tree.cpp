@@ -22,11 +22,11 @@ public:
         
         if (root == nullptr) return;
         
-        if (x == root->val) {
+        if (root->val == x) {
             x_parent = parent;
             x_height = height;
         }
-        else if (y == root->val) {
+        else if (root->val == y) {
             y_parent = parent;
             y_height = height;
         }
